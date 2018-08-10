@@ -26,7 +26,7 @@ public class Deck {
 			shape = "♥";
 			cNum = num;
 		} else if (num <= 26) {// diamond(14~26)
-			shape = "";
+			shape = "●";
 			cNum = num - 13;
 		} else if (num <= 39) {// spade(27~39)
 			shape = "♠";

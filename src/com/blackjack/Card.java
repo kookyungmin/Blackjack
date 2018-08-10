@@ -45,10 +45,10 @@ public class Card {
 			tnum = num;
 			bnum = num;
 		}
-		System.out.println("¦£¦¡¦¡¦¡¦¡¦¡¦¤");
-		System.out.println("¦¢   "+tnum+"¦¢");
-		System.out.println("¦¢  "+shape+"  ¦¢");
-		System.out.println("¦¢"+bnum+"   ¦¢");
-		System.out.println("¦¦¦¡¦¡¦¡¦¡¦¡¦¥");
+		System.out.println("â”Œâ”€â”€â”€â”€â”€â”");
+		System.out.println("â”‚   "+tnum+"â”‚");
+		System.out.println("â”‚  "+shape+"  â”‚");
+		System.out.println("â”‚"+bnum+"   â”‚");
+		System.out.println("â””â”€â”€â”€â”€â”€â”˜");
 	}
 }
