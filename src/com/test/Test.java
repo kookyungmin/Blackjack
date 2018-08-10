@@ -1,28 +1,13 @@
 package com.test;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import com.blackjack.Deck;
 
 public class Test {
 
-	public static void main(String[] args) {
-
-		  List<Integer> cardNum = new ArrayList<Integer>();
-	         
-	        for (int i = 0; i <= 51; i++) {
-	            cardNum.add(i);
-	        }
-	        // set안의 수를 무작위로 섞는다
-	        Collections.shuffle(cardNum);
-	 
-	        int[] shuffledNum = new int[52];
-	        for (int i = 0; i < 52; i++) {
-	            shuffledNum[i] = cardNum.get(i);
-	        }
-	        for (int i = 0; i < 52; i++) {
-	            System.out.println(shuffledNum[i]);
-	        }
+	public static void main(String[] args) {	
+		Deck d = new Deck();
+		for(int i = 0; i < 10; i++) {
+			d.giveCard().printCard();
+		}
 	}
-
 }
