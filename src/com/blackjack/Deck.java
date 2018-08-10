@@ -23,16 +23,16 @@ public class Deck {
 		int cNum = 0;
 		// heart(1~13)
 		if (num <= 13) {
-			shape = "¢¾";
+			shape = "â™¥";
 			cNum = num;
 		} else if (num <= 26) {// diamond(14~26)
-			shape = "8";
+			shape = "";
 			cNum = num - 13;
 		} else if (num <= 39) {// spade(27~39)
-			shape = "¢¼";
+			shape = "â™ ";
 			cNum = num - 26;
 		} else { // clover (40~52)
-			shape = "¢À";
+			shape = "â™£";
 			cNum = num - 39;
 		}
 		return new Card(shape, cNum);
