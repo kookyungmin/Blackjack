@@ -41,7 +41,4 @@ public class Deck {
 	private void suffleCard() {
 		Collections.shuffle(cardNum);
 	}
-
-	
-	
 }
