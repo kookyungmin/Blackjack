@@ -12,7 +12,6 @@ public class Deck {
 		for (int i = 1; i <= 52; i++) {
 			cardNum.add(i);
 		}
-		suffleCard();
 	}
 	public int getCardNum(int index) {
 		return cardNum.get(index);
@@ -37,8 +36,8 @@ public class Deck {
 		}
 		return new Card(shape, cNum);
 	}
-	
-	private void suffleCard() {
+	//카드 섞기
+	public void suffleCard() {
 		Collections.shuffle(cardNum);
 	}
 }
