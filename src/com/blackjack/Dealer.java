@@ -1,41 +1,49 @@
 package com.blackjack;
 
-public class Dealer implements Gamer{
-	private static final int MAXCARD = 11;
-	private int getCardcnt = 0;
-	private Card[] card;
-	
+public class Dealer extends Gamer{
 	public Dealer() {
-		card = new Card[MAXCARD];
+		cards = new Card[MAXCARD];
 	}
 	
 	public void initOpenCard() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	public void showCard() {
-		// TODO Auto-generated method stub
+		
 		
 	}
-	@Override
-	public boolean isGiveCard() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-	@Override
-	public void getCard(Card card) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	@Override
 	public void openCard() {
-		// TODO Auto-generated method stub
+		System.out.println("<<Dealer Card>>");
+		super.openCard();
 		
 	}
+	
+	@Override
+	public boolean isGetCard() {
+		boolean isGetCard = true;
+		if(cardSum()>=17) {
+			isGetCard = false;
+		}
+		return isGetCard;
+	}
+	
 	@Override
 	public int cardSum() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	public void hiddenCardTopPrint() {
+		System.out.print("┌─────┐");
+	}
+	public void hiddenCardMiddlePrint() {
+		System.out.println("│＊ ＊ ＊│");
+	}
+	public void hiddenCardBottomPrint() {
+		System.out.println("└─────┘");
 	}
 	
 	

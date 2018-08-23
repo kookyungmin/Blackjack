@@ -1,31 +1,23 @@
 package com.blackjack;
 
-public class Guest implements Gamer {
-	private static final int MAXCARD = 11;
-	private int getCardcnt = 0;
-	private Card[] card;
+public class Guest extends Gamer {
 	public Guest() {
-		card = new Card[MAXCARD];
+		cards = new Card[MAXCARD];
 	}
 	
 	@Override
-	public boolean isGiveCard() {
+	public boolean isGetCard() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
-	public void getCard(Card card) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
 	public void openCard() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("<<Guest Card>>");
+		super.openCard();
 	}
 	@Override
 	public int cardSum() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 }
