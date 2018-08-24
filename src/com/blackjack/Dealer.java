@@ -4,21 +4,18 @@ public class Dealer extends Gamer{
 	public Dealer() {
 		cards = new Card[MAXCARD];
 	}
-	
-	public void initOpenCard() {
-		
-		
+	@Override
+	public int cardSum() {
+		int sum = 0;
+		for(int i = 0; i < getCardcnt; i++) {
+			sum += cards[i].getNum();
+		}
+		return sum;
 	}
-	public void showCard() {
-		
-		
-	}
-	
 	@Override
 	public void openCard() {
 		System.out.println("<<Dealer Card>>");
 		super.openCard();
-		
 	}
 	
 	@Override
@@ -30,20 +27,50 @@ public class Dealer extends Gamer{
 		return isGetCard;
 	}
 	
-	@Override
-	public int cardSum() {
-		// TODO Auto-generated method stub
-		return 0;
+	public void showCard() {
+		System.out.println("<<Dealer Card>>");
+		
+			cards[0].printTopCard();
+			for(int i = 1; i < getCardcnt; i++) {
+				System.out.print("\t");
+				hiddenCardTopPrint();
+			}
+			System.out.println();
+			cards[0].printTopNum();
+			for(int i = 1; i < getCardcnt; i++) {
+				System.out.print("\t");
+				hiddenCardMiddlePrint();
+			}
+			System.out.println();
+			cards[0].printShape();
+			for(int i = 1; i < getCardcnt; i++) {
+				System.out.print("\t");
+				hiddenCardMiddlePrint();
+			}
+			System.out.println();
+			cards[0].printBottomNum();
+			for(int i = 1; i < getCardcnt; i++) {
+				System.out.print("\t");
+				hiddenCardMiddlePrint();
+			}
+			System.out.println();
+			cards[0].printBottomCard();
+			for(int i = 1; i < getCardcnt; i++) {
+				System.out.print("\t");
+				hiddenCardBottomPrint();
+			}
+			System.out.println();
+		
 	}
 	
 	public void hiddenCardTopPrint() {
 		System.out.print("┌─────┐");
 	}
 	public void hiddenCardMiddlePrint() {
-		System.out.println("│＊ ＊ ＊│");
+		System.out.print("│＊ ＊ ＊│");
 	}
 	public void hiddenCardBottomPrint() {
-		System.out.println("└─────┘");
+		System.out.print("└─────┘");
 	}
 	
 	
