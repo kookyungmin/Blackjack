@@ -150,12 +150,12 @@ public class BlackJack {
 		int guestScore = guest.cardSum();
 		int dealerScore = dealer.cardSum();
 		if(isOver21) {
-			if(dealerScore > 21 && guestScore >21) {
+			if(dealer.isCheckOver21() && guest.isCheckOver21()) {
 				System.out.println("─────────────────────");
 				System.out.println("딜러 합:"+dealerScore+", 당신의 합:"+guestScore);
 				System.out.println("  게임결과: 비겼습니다");
 			
-			}else if(guestScore > 21) {
+			}else if(guest.isCheckOver21()) {
 				System.out.println("─────────────────────");
 				System.out.println("딜러 합:"+dealerScore+", 당신의 합:"+guestScore);
 				System.out.println("게임결과: 딜러가 이겼습니다");
