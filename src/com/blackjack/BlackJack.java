@@ -114,11 +114,7 @@ public class BlackJack {
 	
 	private boolean checkOver21() {
 		boolean isOver21 = false;
-		
-		int guestScore = guest.cardSum();
-		int dealerScore = dealer.cardSum();
-		
-		if(guestScore>21 || dealerScore>21) {
+		if(guest.isCheckOver21() || dealer.isCheckOver21()) {
 			isOver21 = true;
 		}
 		return isOver21;

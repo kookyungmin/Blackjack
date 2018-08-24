@@ -6,7 +6,27 @@ abstract public class Gamer {
 	protected Card[] cards;
 	
 	abstract public boolean isGetCard();
-	abstract public int cardSum();
+	public int cardSum() {
+		int sum = 0;
+		for(int i = 0; i < getCardcnt; i++) {
+			int cardNum = cards[i].getNum();
+			if(cardNum == 11 || cardNum == 12 || cardNum == 13) {
+				sum += 10;
+			}else {
+				sum += cardNum;
+			}
+		}
+		return sum;
+	}
+	public boolean isCheckOver21() {
+		boolean isCheckOver21 = false;
+		
+		if(cardSum()>21) {
+			isCheckOver21 = true;
+		}
+		
+		return isCheckOver21;
+	}
 	
 	public void getCard(Card card) {
 		cards[getCardcnt++] = card;

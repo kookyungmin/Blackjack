@@ -26,19 +26,6 @@ public class Guest extends Gamer {
 		}
 	}
 	
-	@Override
-	public int cardSum() {
-		int sum = 0;
-		for(int i = 0; i < getCardcnt; i++) {
-			int cardNum = cards[i].getNum();
-			if(cardNum == 11 || cardNum == 12 || cardNum == 13) {
-				sum += 10;
-			}else {
-				sum += cardNum;
-			}
-		}
-		return sum;
-	}
 	
 	@Override
 	public void openCard() {
