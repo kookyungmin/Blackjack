@@ -30,7 +30,12 @@ public class Guest extends Gamer {
 	public int cardSum() {
 		int sum = 0;
 		for(int i = 0; i < getCardcnt; i++) {
-			sum += cards[i].getNum();
+			int cardNum = cards[i].getNum();
+			if(cardNum == 12 || cardNum == 13) {
+				sum += 11;
+			}else {
+				sum += cardNum;
+			}
 		}
 		return sum;
 	}
