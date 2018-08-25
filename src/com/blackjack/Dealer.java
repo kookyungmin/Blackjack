@@ -60,7 +60,7 @@ public class Dealer extends Gamer{
 		System.out.print("┌─────┐");
 	}
 	public void hiddenCardMiddlePrint() {
-		System.out.print("│＊ ＊ ＊│");
+		System.out.print("│  *  │");
 	}
 	public void hiddenCardBottomPrint() {
 		System.out.print("└─────┘");

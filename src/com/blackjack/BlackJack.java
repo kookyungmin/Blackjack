@@ -13,8 +13,8 @@ public class BlackJack {
 	private Scanner sc; 
 	private boolean dealerCheck;
 	private boolean guestCheck;
-	//생성자
-	public BlackJack() { 
+	
+	public void blackJackInit() { 
 		this.isOver21 = false;
 		this.dealer = new Dealer();
 		this.guest = new Guest();
@@ -26,6 +26,7 @@ public class BlackJack {
 	// 게임 실행하는 매소드
 	public void execute() {
 		while (true) {
+			blackJackInit();
 			int ch = execInit();
 			sc.nextLine();
 			switch(ch) {
