@@ -9,13 +9,13 @@ abstract public class Gamer {
 	
 	public int cardSum() {
 		int sum = 0;
-		boolean cardA=false;							//고상아
+		boolean cardA=false;							
 		for(int i = 0; i < getCardcnt; i++) {	
 			int cardNum = cards[i].getNum();
 			
 			if(cardNum == 11 || cardNum == 12 || cardNum == 13) {
 				sum += 10;
-			} else if(cardNum == 1){							// 고상아
+			} else if(cardNum == 1){							
 				sum += 1;
 				cardA = true;
 			}else {
@@ -24,13 +24,11 @@ abstract public class Gamer {
 			
 		}
 		
-		if (cardA == true) {					//고상아
-			if(sum<21) {
+		if (cardA == true) {					
 				sum = sum+10;
 				if(sum>21) {
 					sum = sum-10;
 				}
-			}
 		}
 
 		return sum;
