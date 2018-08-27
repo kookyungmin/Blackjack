@@ -6,16 +6,33 @@ abstract public class Gamer {
 	protected Card[] cards;
 	
 	abstract public boolean isGetCard();
+	
 	public int cardSum() {
 		int sum = 0;
-		for(int i = 0; i < getCardcnt; i++) {
+		boolean cardA=false;							//고상아
+		for(int i = 0; i < getCardcnt; i++) {	
 			int cardNum = cards[i].getNum();
+			
 			if(cardNum == 11 || cardNum == 12 || cardNum == 13) {
 				sum += 10;
+			} else if(cardNum == 1){							// 고상아
+				sum += 1;
+				cardA = true;
 			}else {
 				sum += cardNum;
 			}
+			
 		}
+		
+		if (cardA == true) {					//고상아
+			if(sum<21) {
+				sum = sum+10;
+				if(sum>21) {
+					sum = sum-10;
+				}
+			}
+		}
+
 		return sum;
 	}
 	public boolean isCheckOver21() {
