@@ -2,9 +2,7 @@ package com.blackjack;
 
 import java.util.Scanner;
 
-/*
- * getInt 구현 (예외처리), 테스트
- */
+
 public class BlackJack {
 	private boolean isOver21; 
 	private Dealer dealer;
