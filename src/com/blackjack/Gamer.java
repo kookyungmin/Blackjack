@@ -25,10 +25,10 @@ abstract public class Gamer {
 		}
 		
 		if (cardA == true) {					
-				sum = sum+10;
-				if(sum>21) {
-					sum = sum-10;
-				}
+			sum = sum+10;
+			if(sum>21) {
+				sum = sum-10;
+			}
 		}
 
 		return sum;
